@@ -19,7 +19,7 @@ use Psr\Http\Message\RequestInterface;
 interface WebsocketClientInterface
 {
     /**
-     * @throws \K8s\Core\Exception\WebsocketException
+     * @throws WebsocketException
      */
     public function connect(string $subprotocol, RequestInterface $request, FrameHandlerInterface $payloadHandler): void;
 }

@@ -26,7 +26,6 @@ interface ApiInterface
      */
     public function executeHttp(string $uri, string $action, array $options);
 
-
     /**
      * Execute a websocket based request against the API.
      *

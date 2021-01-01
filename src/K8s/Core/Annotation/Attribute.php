@@ -34,4 +34,9 @@ class Attribute
      * @var string
      */
     public $model;
+
+    /**
+     * @var bool
+     */
+    public $isRequired = false;
 }

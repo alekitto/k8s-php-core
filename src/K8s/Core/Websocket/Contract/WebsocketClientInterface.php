@@ -21,5 +21,5 @@ interface WebsocketClientInterface
     /**
      * @throws WebsocketException
      */
-    public function connect(string $subprotocol, RequestInterface $request, FrameHandlerInterface $payloadHandler): void;
+    public function connect(RequestInterface $request, FrameHandlerInterface $payloadHandler): void;
 }

@@ -31,4 +31,9 @@ interface FrameHandlerInterface
      * Triggered when data is received on the connection.
      */
     public function onReceive(Frame $frame, WebsocketConnectionInterface $connection): void;
+
+    /**
+     * The sub-protocol used by the handler.
+     */
+    public function subprotocol(): string;
 }

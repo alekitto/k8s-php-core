@@ -56,6 +56,16 @@ interface ContextConfigInterface
     public function getClientCertificateData(): ?string;
 
     /**
+     * The username for HTTP basic auth.
+     */
+    public function getUsername(): ?string;
+
+    /**
+     * The password for HTTP basic auth.
+     */
+    public function getPassword(): ?string;
+
+    /**
      * The bearer token.
      */
     public function getToken(): ?string;

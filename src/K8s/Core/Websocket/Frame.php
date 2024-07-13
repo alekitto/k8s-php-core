@@ -13,42 +13,12 @@ declare(strict_types=1);
 
 namespace K8s\Core\Websocket;
 
-class Frame
+readonly class Frame
 {
-    /**
-     * @var int
-     */
-    private $opcode;
-
-    /**
-     * @var int
-     */
-    private $payloadLength;
-
-    /**
-     * @var string
-     */
-    private $payload;
-
-    public function __construct(int $opcode, int $payloadLength, string $payload)
-    {
-        $this->opcode = $opcode;
-        $this->payloadLength = $payloadLength;
-        $this->payload = $payload;
-    }
-
-    public function getOpcode(): int
-    {
-        return $this->opcode;
-    }
-
-    public function getPayloadLength(): int
-    {
-        return $this->payloadLength;
-    }
-
-    public function getPayload(): string
-    {
-        return $this->payload;
+    public function __construct(
+        public int $opcode,
+        public int $payloadLength,
+        public string $payload
+    ) {
     }
 }

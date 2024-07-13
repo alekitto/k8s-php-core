@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace K8s\Core\Exception;
 
-use K8s\Core\Exception\Exception;
-
 class WebsocketException extends Exception
 {
 }

@@ -21,18 +21,16 @@ interface ApiInterface
     /**
      * Execute an HTTP based request against the API.
      *
-     * @return mixed
      * @throws HttpException
      */
-    public function executeHttp(string $uri, string $action, array $options);
+    public function executeHttp(string $uri, string $action, array $options): mixed;
 
     /**
      * Execute a websocket based request against the API.
      *
-     * @param callable|object $handler
      * @throws WebsocketException
      */
-    public function executeWebsocket(string $uri, string $type, $handler): void;
+    public function executeWebsocket(string $uri, string $type, callable|object $handler): void;
 
     /**
      * Given a URI path from kubernetes, the parameters, and the query options, form the complete path.

@@ -13,30 +13,14 @@ declare(strict_types=1);
 
 namespace K8s\Core\Annotation;
 
-/**
- * @Annotation
- */
+#[\Attribute]
 class Attribute
 {
-    /**
-     * @Required
-     * @var string
-     */
-    public $name;
-
-    /**
-     * @Enum({"model", "collection", "datetime"})
-     * @var string
-     */
-    public $type;
-
-    /**
-     * @var string
-     */
-    public $model;
-
-    /**
-     * @var bool
-     */
-    public $isRequired = false;
+    public function __construct(
+        public string $name,
+        public AttributeType $type,
+        public string $model,
+        public bool $isRequired = false
+    ) {
+    }
 }

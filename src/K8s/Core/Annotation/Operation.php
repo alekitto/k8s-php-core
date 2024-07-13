@@ -13,30 +13,14 @@ declare(strict_types=1);
 
 namespace K8s\Core\Annotation;
 
-/**
- * @Annotation
- */
+#[\Attribute]
 class Operation
 {
-    /**
-     * @Required
-     * @var string
-     */
-    public $type;
-
-    /**
-     * @Required
-     * @var string
-     */
-    public $path;
-
-    /**
-     * @var string
-     */
-    public $body;
-
-    /**
-     * @var string
-     */
-    public $response;
+    public function __construct(
+        public string $type,
+        public string $path,
+        public string|null $body = null,
+        public string|null $response = null,
+    ) {
+    }
 }

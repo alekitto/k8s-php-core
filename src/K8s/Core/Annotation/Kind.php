@@ -13,25 +13,13 @@ declare(strict_types=1);
 
 namespace K8s\Core\Annotation;
 
-/**
- * @Annotation
- */
+#[\Attribute]
 class Kind
 {
-    /**
-     * @Required
-     * @var string
-     */
-    public $kind;
-
-    /**
-     * @Required
-     * @var string
-     */
-    public $version;
-
-    /**
-     * @var string
-     */
-    public $group;
+    public function __construct(
+        public string $kind,
+        public string $version,
+        public string|null $group = null,
+    ) {
+    }
 }

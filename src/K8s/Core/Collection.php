@@ -16,7 +16,7 @@ namespace K8s\Core;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @extends  ArrayCollection<int, object>
+ * @extends ArrayCollection<int, object>
  */
 class Collection extends ArrayCollection
 {

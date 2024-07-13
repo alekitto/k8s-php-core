@@ -20,7 +20,7 @@ interface HttpClientFactoryInterface
     /**
      * Make an instance of the Http Client based on a specific Kubernetes context configuration.
      *
-     * @param bool $isStreaming Whether or not this client is intended for a streaming API call.
+     * @param bool $isStreaming Whether this client is intended for a streaming API call.
      */
     public function makeClient(ContextConfigInterface $fullContext, bool $isStreaming): ClientInterface;
 }
